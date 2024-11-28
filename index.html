@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi calculator</title>
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="top">
+
+            <div id="one">
+                <h3>BMI CALCULATOR</h3>
+                <label for="" >Height :</label>
+                <input id="userheight" type="text" placeholder="Enter your height"><br><br><br>
+                <div id="validh"></div>
+                <label for="">weight :</label>
+                <input id="userweight" type="text"  placeholder="Enter Your weight"><br><br>
+                <div id="validw"></div>
+                <button id="cal" onclick="login()">calculate</button>
+                <div id="result" class="end">
+                <div>
+                            <h5 id="category"> </h5>
+                        
+                </div>
+
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    function login() {
+        const heigth = userheight.value
+        console.log(heigth);
+
+        const weight = userweight.value
+        console.log(weight);
+        const heigthm = heigth / 100
+        const bmi = (weight / (heigthm ** 2)).toFixed(2)
+       
+ 
+       
+       if( isNaN(weight)||   heigth <= 0 || weight <=0 || isNaN(heigth) )
+        alert("Enter valid details");
+
+        
+            
+       
+
+       
+   result.innerHTML = `<p> Your BMI:  ${bmi}</p>`
+   
+}
+
+
+</script>
+
+</html>
